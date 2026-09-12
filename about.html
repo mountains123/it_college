@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас | Вершини UA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo-link"><span class="logo-icon">⛰️</span> Вершини UA</a>
+            </div>
+            <nav class="main-nav">
+                <a href="./tours.html">Тури</a>
+                <a href="about.html" class="active">Про нас</a>
+                
+                <a href="./contacts.html">Контакти</a>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Підібрати тур</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран сторінки Про нас -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Наша історія — це гори</h1>
+            <p>Ми об'єднуємо людей, для яких вершини — це не просто пейзаж на фото, а стиль життя.</p>
+        </div>
+    </section>
+
+    <!-- Основний контент про нас -->
+    <section class="about-story container">
+        <div class="story-grid">
+            <div class="story-text">
+                <h2>Хто ми такі?</h2>
+                <p>Команда «Вершини UA» — це професійні гіди, інструктори гірського туризму та рятувальники, які знають кожен камінь на Чорногірському хребті та кожен стежки у Мармаросах.</p>
+                <p>Наша місія — зробити гірські походи доступними, безпечними та незабутніми для кожного. Ми віримо, що гори лікують душу, дарують свободу та вчать справжньої дружби біля вечірнього ватного вогнища.</p>
+            </div>
+            <div class="story-img bg-team-photo"></div>
+        </div>
+    </section>
+
+    <!-- Галерея атмосферних фото -->
+    <section class="about-gallery">
+        <div class="container">
+            <h2 class="section-title">Кожна мить важлива!</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item bg-g1"></div>
+                <div class="gallery-item bg-g2"></div>
+                <div class="gallery-item bg-g3"></div>
+                 <div class="gallery-item bg-g4"></div>
+                  <div class="gallery-item bg-g5"></div>
+                   <div class="gallery-item bg-g6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок з коментарями / відгуками учасників -->
+    <section class="about-reviews container">
+        <h2 class="section-title">Що кажуть ті, хто вже з нами підкорив вершини</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p class="review-text">«Сходження на Піп Іван було моїм першим серйозним походом. Гід Максим тримав групу, допомагав на складних ділянках, а чай на вершині біля обсерваторії запам'ятається на все життя!»</p>
+                <h4 class="review-author">— Олена Шевченко, Київ</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">«Неймовірна організація! Рюкзаки збалансовані, їжа смачнюща (особливо суп на вогнищі), а атмосфера просто нереальна. Мармароси закохали в себе з першого кроку.»</p>
+                <h4 class="review-author">— Андрій Коваль, Львів</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">«Дуже переживала щодо фізичної підготовки, але маршрут розрахований ідеально. Дякую за безпеку, професіоналізм та море позитиву!»</p>
+                <h4 class="review-author">— Марія Бондар, Одеса</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Вершини UA. Усі права захищені.</p>
+            <p>Телефон: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Забронювати похід</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Ваше ім'я" required>
+                <input type="tel" id="user-phone" placeholder="Номер телефону" required>
+                <input type="text" id="tour-name-input" placeholder="Обраний тур" readonly>
+                <button type="submit" class="btn-primary">Надіслати заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

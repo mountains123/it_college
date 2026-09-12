@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: black;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo-link {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.logo-icon {
+    font-size: 40px; /* Збільшуй або зменшуй це значення за потреби */
+    line-height: 1;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #27ae60;
+}
+
+.btn-primary {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #219653;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://skyta.com.ua/stuff/statica/450/ecooboi-gory-karpaty-10098-1547367477.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    background: #f39c12;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background: #e67e22;
+}
+
+/* Features */
+.features-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: black;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 4px solid #27ae60;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* Tours */
+.tours-section {
+    padding: 80px 0;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.tour-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-hoverla { background-image: url('https://karpatium.com.ua/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0lIIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e9a7a5897607f1f82ebbdb0a2b775a64c0557823/%D0%B3%D0%BE%D0%B2%D0%B5%D1%80%D0%BB%D0%B0-%D0%B3%D0%BE%D1%80%D0%B0.jpeg'); }
+.bg-pipivan { background-image: url('https://kuluarpohod.com/wp-content/uploads/2020/11/pip-ivan2.jpg'); }
+.bg-marmarosy { background-image: url('https://carpathiansoutdoors.com/upload/tours/16/original/018.jpg'); }
+.bg-synhydra { background-image: url('https://karpatium.com.ua/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcUlRIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a1e75830ef2dee7a3ef565c1bb9d4af92a11ff4b/%D1%81%D0%B8%D0%BD%D0%B5%D0%B2%D0%B8%D1%80%20%D0%BE%D0%B7%D0%B5%D1%80%D0%BE%20%D0%B2%D1%96%D0%B4%D0%BF%D0%BE%D1%87%D0%B8%D0%BD%D0%BE%D0%BA.jpeg'); }
+.bg-borzhava { background-image: url('https://karpaty.love/uploads/posts/2017-11/1510249305_vodospad-shypit.jpg'); }
+.bg-homjak { background-image: url('https://alp.com.ua/content/uploads/images/vid_iz_gory_homyak.jpg'); }
+
+.tour-info {
+    padding: 25px;
+}
+
+.tour-info h3 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.tour-meta {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.tour-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    width: 100%;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-card:hover {
+    background: #34495e;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    width: 100%;
+}
+
+/* Сторінка Про нас: Hero */
+.about-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://doba.ua/karpaty-summer/bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.about-hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* Історія та команда */
+.about-story {
+    padding: 80px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.story-text h2 {
+    font-size: 44px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.story-img {
+    height: 350px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.bg-team-photo {
+    background-image: url('https://gra.travel/media/images/komanda_gra_likiyska_stezhka.max-1920x900.format-webp.webp');
+}
+
+/* Галерея фото */
+.about-gallery {
+    background: #f1f5f9;
+    padding: 80px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 280px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.bg-g1 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgvPdsbneUwiEQ2haM-6tqvY9eZdY1zHFHwLm1eYVM_Qhuw7d3XOzKXQ3U&s=10'); }
+.bg-g2 { background-image: url('https://karpaty.guide/wp-content/uploads/2025/07/planuyemo-pokhid-v-karpaty-spysok-vazhlyvykh-rechej1-1.jpg'); }
+.bg-g3 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCNZvWaew-inWmvceUwP7GFb7ezMbu-_XlYhELYswF0jcyAefPk7FUruG&s=10'); }
+.bg-g4 { background-image: url('https://marieclaire.ua/wp-content/uploads/2020/08/115943672_2735591236677178_1073550155387935148_n.jpg'); }
+.bg-g5 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHvBdFCzRXigTt-iS_oguHVDkAOxX32BtPkWbHIOt2i2puixRwpPLees&s=10'); }
+.bg-g6 { background-image: url('https://karpaty-ua.org.ua/images/aktivnyj_otdyh/nebezpeky_1.jpg'); }
+
+/* Блок відгуків на сторінці Про нас */
+.about-reviews {
+    padding: 80px 0;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #f39c12;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.review-author {
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Горизонтальний маркі-бегучок із бордерами */
+.horizontal-marquee-section {
+    background: #2c3e50;
+    padding: 30px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.horizontal-marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+}
+
+.marquee-item {
+    background: #34495e;
+    border: 2px solid #27ae60;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: border-color 0.3s;
+}
+
+.marquee-item:hover {
+    border-color: #f39c12;
+}
+
+/* Сторінка турів: Hero */
+.tours-page-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://timetotravel.in.ua/wp-content/uploads/2024/07/Petros.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.tours-page-hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* Кнопки фільтрів */
+.filter-section {
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 2px solid #27ae60;
+    color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #27ae60;
+    color: #fff;
+}
+
+/* Фони для джипів та води */
+.bg-jeep1 { background-image: url('https://prokarpaty-tour.info/wp-content/uploads/2026/07/dzhiping.jpg'); }
+.bg-jeep2 { background-image: url('https://yo.in.ua/wp-content/uploads/2024/04/verkhovynalife-uaz-36-e1713782556296.jpg'); }
+.bg-water1 { background-image: url('https://karpaty.in.ua/files/rafting-verkhovyna2.png'); }
+.bg-water2 { background-image: url('https://prykarpattyatour.com/upload/items/306/big/splav-po-dnistru-i-nevidoma-frankivschina1.jpg'); }
+
+/* Сторінка Контакти: Hero */
+.contacts-page-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://kava.ua/storage/jumbotrons/wAIuSGVPQFUv69n0LX794FtlMJGF0lLS9dBLL7NO.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.contacts-page-hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* Сітка контактів */
+.contacts-section {
+    padding: 80px 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contacts-info h2, .contacts-form-card h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contacts-info p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    font-size: 26px;
+}
+
+.contact-item h4 {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Картка з формою зворотного зв'язку */
+.contacts-form-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid #27ae60;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.contacts-form-card input,
+.contacts-form-card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.contacts-form-card textarea {
+    resize: vertical;
+}
+
+.contacts-form-card button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Блок з картою */
+.map-section {
+    padding-bottom: 80px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}

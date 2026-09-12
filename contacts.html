@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Вершини UA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo-link"><span class="logo-icon">⛰️</span> Вершини UA</a>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Головна</a>
+                <a href="tours.html">Тури</a>
+                <a href="about.html">Про нас</a>
+                <a href="contacts.html" class="active">Контакти</a>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Підібрати тур</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран сторінки контакти -->
+    <section class="contacts-page-hero">
+        <div class="hero-content">
+            <h1>Зв'яжися з нами</h1>
+            <p>Маєш питання щодо маршрутів, спорядження чи броні? Напиши або зателефонуй нам!</p>
+        </div>
+    </section>
+
+    <!-- Блок контактів та форми -->
+    <section class="contacts-section container">
+        <div class="contacts-grid">
+            
+            <!-- Інформація про зв'язок -->
+            <div class="contacts-info">
+                <h2>Наші координати</h2>
+                <p>Ми завжди на зв'язку та готові допомогти спланувати твою наступну мандрівку в Карпати.</p>
+                
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Головний офіс:</h4>
+                        <p>м. Івано-Франківськ, вул. Незалежності, 12</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h4>Телефони:</h4>
+                        <p>+38 (098) 123-45-67<br>+38 (050) 987-65-43</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <h4>Електронна пошта:</h4>
+                        <p>info@vershyny.ua<br>support@vershyny.ua</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <h4>Графік роботи:</h4>
+                        <p>Пн - Сб: 9:00 – 19:00<br>Нд: Вихідний (на маршруті)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма зворотного зв'язку -->
+            <div class="contacts-form-card">
+                <h2>Напиши нам</h2>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="fb-name">Ваше ім'я</label>
+                        <input type="text" id="fb-name" placeholder="Введіть ваше ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-phone">Номер телефону або Email</label>
+                        <input type="text" id="fb-phone" placeholder="+380..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-message">Повідомлення</label>
+                        <textarea id="fb-message" rows="4" placeholder="Розкажіть, яке питання вас цікавить..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Надіслати повідомлення</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Блок карти (імітація або вбудована мапа) -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Як нас знайти</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.9167818785167!2d24.709725!3d48.922633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c1762c5a01df%3A0x897813a3721fb6ba!2z0LLRg9C70LjRhtGP Cy0g0KTQsNC90YLRgNC40LzQvtCyLCDQmtC40ZfQstGB0YzQutCwINC-0LHQuy4sIDc2MDAw!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Вершини UA. Усі права захищені.</p>
+            <p>Телефон: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Забронювати похід</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Ваше ім'я" required>
+                <input type="tel" id="user-phone" placeholder="Номер телефону" required>
+                <input type="text" id="tour-name-input" placeholder="Обраний тур" readonly>
+                <button type="submit" class="btn-primary">Надіслати заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

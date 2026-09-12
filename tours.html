@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Усі тури та активності | Вершини UA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo-link"><span class="logo-icon">⛰️</span> Вершини UA</a>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Головна</a>
+                <a href="tours.html" class="active">Тури</a>
+                <a href="about.html">Про нас</a>
+                <a href="./contacts.html">Контакти</a>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Підібрати тур</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран сторінки турів -->
+    <section class="tours-page-hero">
+        <div class="hero-content">
+            <h1>Каталог пригод та маршрутів</h1>
+            <p>Обирай свій формат відпочинку: високі вершини, круті позашляховики чи бурхливі річки.</p>
+        </div>
+    </section>
+
+    <!-- Фільтри по категоріях -->
+    <section class="filter-section container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterTours('all')">Усі пригоди</button>
+            <button class="filter-btn" onclick="filterTours('hiking')">⛰️ Піші сходження</button>
+            <button class="filter-btn" onclick="filterTours('jeep')">🚙 Джип-тури</button>
+            <button class="filter-btn" onclick="filterTours('water')">🛶 Водні сплави</button>
+        </div>
+    </section>
+
+    <!-- Каталог турів -->
+    <section class="tours-section container">
+        <div class="tours-grid" id="full-tours-grid">
+            
+            <!-- Піші тури -->
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-hoverla"></div>
+                <div class="tour-info">
+                    <h3>Сходження на Говерлу та Петрос</h3>
+                    <p class="tour-meta">⏱ 2 дні | 📍 Чорногора | 🧗 Складність: Середня</p>
+                    <p class="tour-price">від 3200 грн</p>
+                    <button class="btn-card" onclick="openModal('Говерла та Петрос')">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-pipivan"></div>
+                <div class="tour-info">
+                    <h3>Чорногірський хребет та Піп Іван</h3>
+                    <p class="tour-meta">⏱ 3 дні | 📍 Обсерваторія "Білий Слон" | 🧗 Складність: Висока</p>
+                    <p class="tour-price">від 4500 грн</p>
+                    <button class="btn-card" onclick="openModal('Піп Іван')">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-marmarosy"></div>
+                <div class="tour-info">
+                    <h3>Мармароський масив ("Гуцульські Альпи")</h3>
+                    <p class="tour-meta">⏱ 4 дні | 📍 Кордон з Румунією | 🧗 Складність: Висока</p>
+                    <p class="tour-price">від 5800 грн</p>
+                    <button class="btn-card" onclick="openModal('Мармароси')">Забронювати</button>
+                </div>
+            </div>
+
+            <!-- Джип-тури -->
+            <div class="tour-card" data-category="jeep">
+                <div class="tour-img bg-jeep1"></div>
+                <div class="tour-info">
+                    <h3>Джипінг на полонину Руна</h3>
+                    <p class="tour-meta">⏱ 1 день | 📍 Карпатські джерела | 🚙 Екстрим: Середній</p>
+                    <p class="tour-price">від 2400 грн</p>
+                    <button class="btn-card" onclick="openModal('Джипінг на полонину Руна')">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="jeep">
+                <div class="tour-img bg-jeep2"></div>
+                <div class="tour-info">
+                    <h3>Поїздка на позашляховиках до озера Несамовите</h3>
+                    <p class="tour-meta">⏱ 1 день | 📍 Карпатський НПП | 🚙 Екстрим: Високий</p>
+                    <p class="tour-price">від 2800 грн</p>
+                    <button class="btn-card" onclick="openModal('Джип до озера Несамовите')">Забронювати</button>
+                </div>
+            </div>
+
+            <!-- Водні тури (Сплави) -->
+            <div class="tour-card" data-category="water">
+                <div class="tour-img bg-water1"></div>
+                <div class="tour-info">
+                    <h3>Рафтинг на Чорному Черемоші</h3>
+                    <p class="tour-meta">⏱ 1 день | 📍 Бурхлива річка | 🛶 Складність: Динамічна</p>
+                    <p class="tour-price">від 1900 грн</p>
+                    <button class="btn-card" onclick="openModal('Рафтинг на Черемоші')">Забронювати</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="water">
+                <div class="tour-img bg-water2"></div>
+                <div class="tour-info">
+                    <h3>Сплав на катамаранах по Дністровському каньйону</h3>
+                    <p class="tour-meta">⏱ 3 дні | 📍 Мальовничі скелі | 🛶 Складність: Спокійна</p>
+                    <p class="tour-price">від 4100 грн</p>
+                    <button class="btn-card" onclick="openModal('Сплав по Дністру')">Забронювати</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Вершини UA. Усі права захищені.</p>
+            <p>Телефон: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Забронювати пригоду</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Ваше ім'я" required>
+                <input type="tel" id="user-phone" placeholder="Номер телефону" required>
+                <input type="text" id="tour-name-input" placeholder="Обраний тур" readonly>
+                <button type="submit" class="btn-primary">Надіслати заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
