@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpathian Peaks | Hiking & Ascents in the Carpathians</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+              <a href="index-en.html" class="logo-link"><span class="logo-icon">⛰️</span> Carpathian Peaks</a>
+            </div>
+            <nav class="main-nav">
+                <a href="./tours-en.html">Tours</a>
+                <a href="./about-en.html">About Us</a>
+                <a href="./contacts-en.html">Contacts</a>
+                <button class="lang-btn" onclick="switchToUkrainian()">
+                    <span class="planet-icon">🌍</span> <span>UA</span>
+                </button>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Book a Tour</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран (Hero) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Conquer the Highest Peaks of the Carpathians</h1>
+            <p>Professional guides, unforgettable landscapes, safety, and the true atmosphere of mountain hiking.</p>
+            <a href="#tours" class="btn-hero">Choose Your Hike</a>
+        </div>
+    </section>
+
+    <!-- Горизонтальна рухома стрічка -->
+    <section class="horizontal-marquee-section">
+        <div class="marquee-container">
+            <div class="horizontal-marquee-track" id="horizontal-marquee">
+                <div class="marquee-item">⛰️ Hoverla Ascent</div>
+                <div class="marquee-item">🌲 Wild Carpathians</div>
+                <div class="marquee-item">⛺ Overnight Under the Stars</div>
+                <div class="marquee-item">🎒 Gear Discounts</div>
+                <div class="marquee-item">☕ Morning Tea on the Summit</div>
+                <div class="marquee-item">🗺️ Professional Guides</div>
+                <!-- Дублюємо для безшовного циклу -->
+                <div class="marquee-item">⛰️ Hoverla Ascent</div>
+                <div class="marquee-item">🌲 Wild Carpathians</div>
+                <div class="marquee-item">⛺ Overnight Under the Stars</div>
+                <div class="marquee-item">🎒 Gear Discounts</div>
+                <div class="marquee-item">☕ Morning Tea on the Summit</div>
+                <div class="marquee-item">🗺️ Professional Guides</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Переваги -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🧭 Experienced Guides</h3>
+                    <p>Certified instructors with years of mountain climbing experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Safety First</h3>
+                    <p>Full first-aid kits, walkie-talkies, and registration with mountain rescue services.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🍲 Field Kitchen</h3>
+                    <p>Hot, delicious meals cooked over an open campfire with love.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⛺ Modern Equipment</h3>
+                    <p>We provide reliable tents, sleeping bags, and backpacks from leading world brands.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📸 Atmospheric Photos</h3>
+                    <p>Our guides take awesome shots on summits and during rest stops for your memories.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤝 Small Groups</h3>
+                    <p>We form friendly companies of up to 10-12 people for a comfortable pace and coziness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог турів -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <h2 class="section-title">Popular Ascents</h2>
+            
+            <div class="tours-grid">
+                <div class="tour-card" data-category="hoverla">
+                    <div class="tour-img bg-hoverla"></div>
+                    <div class="tour-info">
+                        <h3>Hoverla & Petros Ascent</h3>
+                        <p class="tour-meta">⏱ 2 days | 📍 Chornohora | 🧗 Difficulty: Medium</p>
+                        <p class="tour-price">from 3200 UAH</p>
+                        <button class="btn-card" onclick="openModal('Hoverla & Petros')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="pipivan">
+                    <div class="tour-img bg-pipivan"></div>
+                    <div class="tour-info">
+                        <h3>Chornohora Ridge & Pip Ivan</h3>
+                        <p class="tour-meta">⏱ 3 days | 📍 "White Elephant" Observatory | 🧗 Difficulty: High</p>
+                        <p class="tour-price">from 4500 UAH</p>
+                        <button class="btn-card" onclick="openModal('Pip Ivan')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="marmarosy">
+                    <div class="tour-img bg-marmarosy"></div>
+                    <div class="tour-info">
+                        <h3>Marmarosh Massif ("Hutsul Alps")</h3>
+                        <p class="tour-meta">⏱ 4 days | 📍 Romanian Border | 🧗 Difficulty: High</p>
+                        <p class="tour-price">from 5800 UAH</p>
+                        <button class="btn-card" onclick="openModal('Marmarosh')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="synhydra">
+                    <div class="tour-img bg-synhydra"></div>
+                    <div class="tour-info">
+                        <h3>Lake Synevyr & Pishkonya Ridge</h3>
+                        <p class="tour-meta">⏱ 3 days | 📍 National Park | 🧗 Difficulty: Low</p>
+                        <p class="tour-price">from 3900 UAH</p>
+                        <button class="btn-card" onclick="openModal('Lake Synevyr')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="borzhava">
+                    <div class="tour-img bg-borzhava"></div>
+                    <div class="tour-info">
+                        <h3>Borzhava Polonyna & Shypit Waterfall</h3>
+                        <p class="tour-meta">⏱ 2 days | 📍 Transcarpathia | 🧗 Difficulty: Easy</p>
+                        <p class="tour-price">from 2900 UAH</p>
+                        <button class="btn-card" onclick="openModal('Borzhava Polonyna')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="hom’yak">
+                    <div class="tour-img bg-homjak"></div>
+                    <div class="tour-info">
+                        <h3>Mount Khomyak & Zhenetskyi Huk</h3>
+                        <p class="tour-meta">⏱ 1 day | 📍 Gorgany | 🧗 Difficulty: Beginner</p>
+                        <p class="tour-price">from 1800 UAH</p>
+                        <button class="btn-card" onclick="openModal('Mount Khomyak')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти / Footer -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Carpathian Peaks. All rights reserved.</p>
+            <p>Phone: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно бронювання -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Book a Tour</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Your Name" required>
+                <input type="tel" id="user-phone" placeholder="Phone Number" required>
+                <input type="text" id="tour-name-input" placeholder="Selected Tour" readonly>
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Carpathian Peaks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index-en.html" class="logo-link"><span class="logo-icon">⛰️</span> Carpathian Peaks</a>
+            </div>
+            <nav class="main-nav">
+                <a href="./tours-en.html">Tours</a>
+                <a href="about-en.html" class="active">About Us</a>
+                <a href="./contacts-en.html">Contacts</a>
+                <button class="lang-btn" onclick="switchToUkrainian()">
+                    <span class="planet-icon">🌍</span> <span>UA</span>
+                </button>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Book a Tour</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран сторінки Про нас -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Our History is the Mountains</h1>
+            <p>We unite people for whom peaks are not just a photo background, but a lifestyle.</p>
+        </div>
+    </section>
+
+    <!-- Основний контент про нас -->
+    <section class="about-story container">
+        <div class="story-grid">
+            <div class="story-text">
+                <h2>Who Are We?</h2>
+                <p>The "Carpathian Peaks" team consists of professional guides, mountain tourism instructors, and rescuers who know every stone on the Chornohora Ridge and every trail in the Marmarosh.</p>
+                <p>Our mission is to make mountain hiking accessible, safe, and unforgettable for everyone. We believe that the mountains heal the soul, give freedom, and teach true friendship by the evening campfire.</p>
+            </div>
+            <div class="story-img bg-team-photo"></div>
+        </div>
+    </section>
+
+    <!-- Галерея атмосферних фото -->
+    <section class="about-gallery">
+        <div class="container">
+            <h2 class="section-title">Every Moment Matters!</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item bg-g1"></div>
+                <div class="gallery-item bg-g2"></div>
+                <div class="gallery-item bg-g3"></div>
+                <div class="gallery-item bg-g4"></div>
+                <div class="gallery-item bg-g5"></div>
+                <div class="gallery-item bg-g6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок з коментарями / відгуками учасників -->
+    <section class="about-reviews container">
+        <h2 class="section-title">What Those Who Have Conquered Peaks With Us Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p class="review-text">"The ascent to Pip Ivan was my first serious hike. Guide Maksym kept the group together, helped on difficult sections, and the tea on the summit near the observatory will be remembered for a lifetime!"</p>
+                <h4 class="review-author">— Olena Shevchenko, Kyiv</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Incredible organization! Backpacks are balanced, the food is delicious (especially the campfire soup), and the atmosphere is just unreal. Marmarosh made me fall in love from the first step."</p>
+                <h4 class="review-author">— Andriy Koval, Lviv</h4>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"I was very worried about my physical fitness, but the route is designed perfectly. Thank you for safety, professionalism, and a sea of positivity!"</p>
+                <h4 class="review-author">— Mariia Bondar, Odesa</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Carpathian Peaks. All rights reserved.</p>
+            <p>Phone: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Book a Tour</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Your Name" required>
+                <input type="tel" id="user-phone" placeholder="Phone Number" required>
+                <input type="text" id="tour-name-input" placeholder="Selected Tour" readonly>
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

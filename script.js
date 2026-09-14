@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-
     // Обробка форми
     const form = document.getElementById("booking-form");
     if (form) {
@@ -83,4 +81,37 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset();
         });
     }
-});
+})
+
+
+
+// Перехід на англійську версію поточної сторінки
+function switchToEnglish() {
+    let currentPath = window.location.pathname;
+    
+    // Якщо це головна (коренева або index.html)
+    if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
+        window.location.href = 'index-en.html';
+        return;
+    }
+    
+    // Для інших сторінок (tours.html -> tours-en.html)
+    let newPath = currentPath.replace('.html', '-en.html');
+    window.location.href = newPath;
+}
+
+// Перехід назад на українську версію
+function switchToUkrainian() {
+    let currentPath = window.location.pathname;
+    
+    if (currentPath.endsWith('index-en.html')) {
+        window.location.href = 'index.html';
+        return;
+    }
+    
+    let newPath = currentPath.replace('-en.html', '.html');
+    window.location.href = newPath;
+}
+   
+
+ 

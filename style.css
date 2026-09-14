@@ -620,3 +620,30 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid #27ae60;
+    color: #2c3e50;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: #27ae60;
+    color: #fff;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* відстань між пунктами меню та кнопкою */
+}

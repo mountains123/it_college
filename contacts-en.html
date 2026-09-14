@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакти | Вершини UA</title>
+    <title>Contacts | Carpathian Peaks</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,19 +12,19 @@
     <header class="site-header">
         <div class="header-container">
             <div class="logo-area">
-                <a href="index.html" class="logo-link"><span class="logo-icon">⛰️</span> Вершини UA</a>
+                <a href="index-en.html" class="logo-link"><span class="logo-icon">⛰️</span> Carpathian Peaks</a>
             </div>
             <nav class="main-nav">
-                <a href="index.html">Головна</a>
-                <a href="./tours.html">Тури</a>
-                <a href="about.html">Про нас</a>
-                <a href="contacts.html" class="active">Контакти</a>
-                <button class="lang-btn" onclick="switchToEnglish()">
-    <span class="planet-icon">🌍</span> <span>EN</span>
-</button>
+                <a href="index-en.html">Home</a>
+                <a href="./tours-en.html">Tours</a>
+                <a href="about-en.html">About Us</a>
+                <a href="contacts-en.html" class="active">Contacts</a>
+                <button class="lang-btn" onclick="switchToUkrainian()">
+                    <span class="planet-icon">🌍</span> <span>UA</span>
+                </button>
             </nav>
             <div class="header-action">
-                <button class="btn-primary" onclick="openModal()">Підібрати тур</button>
+                <button class="btn-primary" onclick="openModal()">Book a Tour</button>
             </div>
         </div>
     </header>
@@ -32,8 +32,8 @@
     <!-- Головний екран сторінки контакти -->
     <section class="contacts-page-hero">
         <div class="hero-content">
-            <h1>Зв'яжися з нами</h1>
-            <p>Маєш питання щодо маршрутів, спорядження чи броні? Напиши або зателефонуй нам!</p>
+            <h1>Get in Touch</h1>
+            <p>Have questions about routes, equipment, or booking? Write or call us!</p>
         </div>
     </section>
 
@@ -43,21 +43,21 @@
             
             <!-- Інформація про зв'язок -->
             <div class="contacts-info">
-                <h2>Наші координати</h2>
-                <p>Ми завжди на зв'язку та готові допомогти спланувати твою наступну мандрівку в Карпати.</p>
+                <h2>Our Coordinates</h2>
+                <p>We are always in touch and ready to help you plan your next trip to the Carpathians.</p>
                 
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
                     <div>
-                        <h4>Головний офіс:</h4>
-                        <p>м. Івано-Франківськ, вул. Незалежності, 12</p>
+                        <h4>Main Office:</h4>
+                        <p>12 Nezalezhnosti St., Ivano-Frankivsk</p>
                     </div>
                 </div>
 
                 <div class="contact-item">
                     <span class="contact-icon">📞</span>
                     <div>
-                        <h4>Телефони:</h4>
+                        <h4>Phones:</h4>
                         <p>+38 (098) 123-45-67<br>+38 (050) 987-65-43</p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="contact-item">
                     <span class="contact-icon">✉️</span>
                     <div>
-                        <h4>Електронна пошта:</h4>
+                        <h4>Email:</h4>
                         <p>info@vershyny.ua<br>support@vershyny.ua</p>
                     </div>
                 </div>
@@ -73,39 +73,39 @@
                 <div class="contact-item">
                     <span class="contact-icon">⏰</span>
                     <div>
-                        <h4>Графік роботи:</h4>
-                        <p>Пн - Сб: 9:00 – 19:00<br>Нд: Вихідний (на маршруті)</p>
+                        <h4>Working Hours:</h4>
+                        <p>Mon - Sat: 9:00 AM – 7:00 PM<br>Sun: Day off (on the trail)</p>
                     </div>
                 </div>
             </div>
 
             <!-- Форма зворотного зв'язку -->
             <div class="contacts-form-card">
-                <h2>Напиши нам</h2>
+                <h2>Write to Us</h2>
                 <form id="feedback-form">
                     <div class="form-group">
-                        <label for="fb-name">Ваше ім'я</label>
-                        <input type="text" id="fb-name" placeholder="Введіть ваше ім'я" required>
+                        <label for="fb-name">Your Name</label>
+                        <input type="text" id="fb-name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
-                        <label for="fb-phone">Номер телефону або Email</label>
+                        <label for="fb-phone">Phone Number or Email</label>
                         <input type="text" id="fb-phone" placeholder="+380..." required>
                     </div>
                     <div class="form-group">
-                        <label for="fb-message">Повідомлення</label>
-                        <textarea id="fb-message" rows="4" placeholder="Розкажіть, яке питання вас цікавить..." required></textarea>
+                        <label for="fb-message">Message</label>
+                        <textarea id="fb-message" rows="4" placeholder="Tell us what you would like to know..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary">Надіслати повідомлення</button>
+                    <button type="submit" class="btn-primary">Send Message</button>
                 </form>
             </div>
 
         </div>
     </section>
 
-    <!-- Блок карти (імітація або вбудована мапа) -->
+    <!-- Блок карти -->
     <section class="map-section">
         <div class="container">
-            <h2 class="section-title">Як нас знайти</h2>
+            <h2 class="section-title">How to Find Us</h2>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.9167818785167!2d24.709725!3d48.922633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c1762c5a01df%3A0x897813a3721fb6ba!2z0LLRg9C70LjRhtGP Cy0g0KTQsNC90YLRgNC40LzQvtCyLCDQmtC40ZfQstGB0YzQutCwINC-0LHQuy4sIDc2MDAw!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
@@ -115,8 +115,8 @@
     <!-- Футер -->
     <footer class="site-footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Вершини UA. Усі права захищені.</p>
-            <p>Телефон: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+            <p>&copy; 2026 Carpathian Peaks. All rights reserved.</p>
+            <p>Phone: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
         </div>
     </footer>
 
@@ -124,12 +124,12 @@
     <div id="booking-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2>Забронювати похід</h2>
+            <h2>Book a Tour</h2>
             <form id="booking-form">
-                <input type="text" id="user-name" placeholder="Ваше ім'я" required>
-                <input type="tel" id="user-phone" placeholder="Номер телефону" required>
-                <input type="text" id="tour-name-input" placeholder="Обраний тур" readonly>
-                <button type="submit" class="btn-primary">Надіслати заявку</button>
+                <input type="text" id="user-name" placeholder="Your Name" required>
+                <input type="tel" id="user-phone" placeholder="Phone Number" required>
+                <input type="text" id="tour-name-input" placeholder="Selected Tour" readonly>
+                <button type="submit" class="btn-primary">Submit Request</button>
             </form>
         </div>
     </div>

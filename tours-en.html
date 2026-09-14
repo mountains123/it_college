@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tours & Activities | Carpathian Peaks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index-en.html" class="logo-link"><span class="logo-icon">⛰️</span> Carpathian Peaks</a>
+            </div>
+            <nav class="main-nav">
+                <a href="index-en.html">Home</a>
+                <a href="tours-en.html" class="active">Tours</a>
+                <a href="about-en.html">About Us</a>
+                <a href="./contacts-en.html">Contacts</a>
+                <button class="lang-btn" onclick="switchToUkrainian()">
+                    <span class="planet-icon">🌍</span> <span>UA</span>
+                </button>
+            </nav>
+            <div class="header-action">
+                <button class="btn-primary" onclick="openModal()">Book a Tour</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран сторінки турів -->
+    <section class="tours-page-hero">
+        <div class="hero-content">
+            <h1>Catalog of Adventures & Routes</h1>
+            <p>Choose your vacation format: high peaks, rugged off-road jeeps, or turbulent rivers.</p>
+        </div>
+    </section>
+
+    <!-- Фільтри по категоріях -->
+    <section class="filter-section container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterTours('all')">All Adventures</button>
+            <button class="filter-btn" onclick="filterTours('hiking')">⛰️ Hiking</button>
+            <button class="filter-btn" onclick="filterTours('jeep')">🚙 Jeep Tours</button>
+            <button class="filter-btn" onclick="filterTours('water')">🛶 Rafting & Water</button>
+        </div>
+    </section>
+
+    <!-- Каталог турів -->
+    <section class="tours-section container">
+        <div class="tours-grid" id="full-tours-grid">
+            
+            <!-- Піші тури -->
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-hoverla"></div>
+                <div class="tour-info">
+                    <h3>Hoverla & Petros Ascent</h3>
+                    <p class="tour-meta">⏱ 2 days | 📍 Chornohora | 🧗 Difficulty: Medium</p>
+                    <p class="tour-price">from 3200 UAH</p>
+                    <button class="btn-card" onclick="openModal('Hoverla & Petros')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-pipivan"></div>
+                <div class="tour-info">
+                    <h3>Chornohora Ridge & Pip Ivan</h3>
+                    <p class="tour-meta">⏱ 3 days | 📍 "White Elephant" Observatory | 🧗 Difficulty: High</p>
+                    <p class="tour-price">from 4500 UAH</p>
+                    <button class="btn-card" onclick="openModal('Pip Ivan')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="hiking">
+                <div class="tour-img bg-marmarosy"></div>
+                <div class="tour-info">
+                    <h3>Marmarosh Massif ("Hutsul Alps")</h3>
+                    <p class="tour-meta">⏱ 4 days | 📍 Romanian Border | 🧗 Difficulty: High</p>
+                    <p class="tour-price">from 5800 UAH</p>
+                    <button class="btn-card" onclick="openModal('Marmarosh')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Джип-тури -->
+            <div class="tour-card" data-category="jeep">
+                <div class="tour-img bg-jeep1"></div>
+                <div class="tour-info">
+                    <h3>Jeeping to Polonyna Runa</h3>
+                    <p class="tour-meta">⏱ 1 day | 📍 Carpathian Springs | 🚙 Extreme: Medium</p>
+                    <p class="tour-price">from 2400 UAH</p>
+                    <button class="btn-card" onclick="openModal('Jeeping to Polonyna Runa')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="jeep">
+                <div class="tour-img bg-jeep2"></div>
+                <div class="tour-info">
+                    <h3>Off-road Trip to Lake Nesamovyte</h3>
+                    <p class="tour-meta">⏱ 1 day | 📍 Carpathian NNP | 🚙 Extreme: High</p>
+                    <p class="tour-price">from 2800 UAH</p>
+                    <button class="btn-card" onclick="openModal('Jeep to Lake Nesamovyte')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Водні тури (Сплави) -->
+            <div class="tour-card" data-category="water">
+                <div class="tour-img bg-water1"></div>
+                <div class="tour-info">
+                    <h3>Rafting on the Black Cheremosh</h3>
+                    <p class="tour-meta">⏱ 1 day | 📍 Turbulent River | 🛶 Difficulty: Dynamic</p>
+                    <p class="tour-price">from 1900 UAH</p>
+                    <button class="btn-card" onclick="openModal('Rafting on Cheremosh')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="tour-card" data-category="water">
+                <div class="tour-img bg-water2"></div>
+                <div class="tour-info">
+                    <h3>Catamaran Rafting on Dniester Canyon</h3>
+                    <p class="tour-meta">⏱ 3 days | 📍 Scenic Cliffs | 🛶 Difficulty: Calm</p>
+                    <p class="tour-price">from 4100 UAH</p>
+                    <button class="btn-card" onclick="openModal('Dniester Rafting')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Carpathian Peaks. All rights reserved.</p>
+            <p>Phone: +38 (098) 123-45-67 | Email: info@vershyny.ua</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Book an Adventure</h2>
+            <form id="booking-form">
+                <input type="text" id="user-name" placeholder="Your Name" required>
+                <input type="tel" id="user-phone" placeholder="Phone Number" required>
+                <input type="text" id="tour-name-input" placeholder="Selected Tour" readonly>
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
